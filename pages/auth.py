@@ -94,23 +94,17 @@ class Auth(Container):
             page.session.set("session", r"service/sessions/" + file_session)
 
         def auth(e):
-            print("LOL")
-
-            print("auth(e) started")
             # Если введен логин и пароль и не введен токен
             if self.login_field.value != "" and self.password_field.value != "":
-                print("self.login and self.pass passed")
                 # Выполняем проверку логина и пароля
                 auth_cert = oauth.auth_validate(
                     self, self.login_field.value, self.password_field.value
                 )
-                print("auth_cert passed")
                 print(auth_cert)
                 if auth_cert != False:
                     # Выполняем загрузку сертификата
                     # Сохраняем данные в сессию авторизации
                     page.session.set("session", auth_cert)
-                    print("test")
                     self.page.go("/")
                     return page.update()
                 else:
