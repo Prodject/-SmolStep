@@ -84,6 +84,7 @@ class Auth(Container):
             label="Пароль", border="none", text_size=14, text_align="center"
         )
 
+
         def store_session(file_session):
             # Получаем из сертификата наименование папки
 
@@ -94,17 +95,23 @@ class Auth(Container):
             page.session.set("session", r"service/sessions/" + file_session)
 
         def auth(e):
+            print("LOL")
+
+            print("auth(e) started")
             # Если введен логин и пароль и не введен токен
             if self.login_field.value != "" and self.password_field.value != "":
+                print("self.login and self.pass passed")
                 # Выполняем проверку логина и пароля
                 auth_cert = oauth.auth_validate(
                     self, self.login_field.value, self.password_field.value
                 )
+                print("auth_cert passed")
                 print(auth_cert)
                 if auth_cert != False:
                     # Выполняем загрузку сертификата
                     # Сохраняем данные в сессию авторизации
                     page.session.set("session", auth_cert)
+                    print('test')
                     self.page.go("/")
                     return page.update()
                 else:
@@ -234,6 +241,7 @@ class Auth(Container):
                                                 "Авторизация",
                                                 ref=upload_button,
                                                 icon=icons.VERIFIED_USER_OUTLINED,
+                                                # on_click=print("clicked"),
                                                 on_click=auth,
                                                 # on_click=self.login,
                                                 # on_click=lambda _: page.go('/token'),
