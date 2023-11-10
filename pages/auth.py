@@ -84,7 +84,6 @@ class Auth(Container):
             label="Пароль", border="none", text_size=14, text_align="center"
         )
 
-
         def store_session(file_session):
             # Получаем из сертификата наименование папки
 
@@ -111,7 +110,7 @@ class Auth(Container):
                     # Выполняем загрузку сертификата
                     # Сохраняем данные в сессию авторизации
                     page.session.set("session", auth_cert)
-                    print('test')
+                    print("test")
                     self.page.go("/")
                     return page.update()
                 else:
@@ -245,7 +244,7 @@ class Auth(Container):
                                                 on_click=auth,
                                                 # on_click=self.login,
                                                 # on_click=lambda _: page.go('/token'),
-                                                disabled=True,
+                                                disabled=False,
                                                 content=Text(
                                                     size=13,
                                                     weight="bold",
