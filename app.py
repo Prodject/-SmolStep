@@ -31,7 +31,7 @@ class Main(UserControl):
     def on_route_change(self, route):
         new_page = {
             # "/": Auth,
-            "/": Auth,
+            "/": Home,
             # "/": Dashboard,
             # "/authority": Authority,
         }[self.page.route](self.page)
