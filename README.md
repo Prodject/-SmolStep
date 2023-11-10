@@ -1,2 +1,2 @@
-# -SmolStep
+# SmolStep
 Smolathon Smolensk
