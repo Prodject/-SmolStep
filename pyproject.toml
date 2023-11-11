@@ -1,20 +1,25 @@
 [tool.poetry]
 name = "smolstep"
-version = "0.1"
-description = "Smolathon"
-authors = ["labinf"]
+version = "0.1.0"
+description = ""
+authors = ["None"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.11"
-flet = "^0.11.0"
-python-dotenv = "^1.0.0"
-python3-utils = "^0.4.0"
+folium = "^0.15.0"
+networkx = "^3.2.1"
+osmnx = "^1.7.1"
+geopy = "^2.4.0"
+tqdm = "^4.66.1"
+scikit-learn = "^1.3.2"
 
 [tool.poetry.group.dev.dependencies]
-flet = "^0.11.0"
-python-dotenv = "^1.0.0"
-python3-utils = "^0.4.0"
+folium = "^0.15.0"
+networkx = "^3.2.1"
+osmnx = "^1.7.1"
+geopy = "^2.4.0"
+tqdm = "^4.66.1"
 
 [build-system]
 requires = ["poetry-core"]
