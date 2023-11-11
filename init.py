@@ -148,7 +148,7 @@ html_string = """\
                     <div class="row">
                         <div class="col-12">
                             <nav class="navbar row navbar-expand-md navbar-dark" role="navigation">
-                                <a class="navbar-brand ltc-6728 logo-style" href="index.html">SMOLSTEPS</a>
+                                <a class="navbar-brand ltc-6728 logo-style" style="width: 70%;" href="index.html">SMOLSTEPS</a>
                                 <button id="nav-toggle" type="button" class="ui-navbar-toggler navbar-toggler border-0 p-0 mr-md-0 ml-auto" data-toggle="collapse" data-target=".navbar-44256" aria-expanded="false" aria-label="Toggle navigation">
                                     <span class="navbar-toggler-icon"><svg height="32" viewBox="0 0 32 32" width="32"><path class="svg-menu-icon " d="m2 9h28m-28 7h28m-28 7h28"></path></svg></span>
                                 </button>
