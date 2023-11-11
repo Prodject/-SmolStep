@@ -20,8 +20,13 @@ def report():
 
 def map():
     start_name = request.form.get("input_1111")
-
+    if start_name is None:
+        start_name = "улица Гагарина, 1, город Смоленск, Россия"
+    print(start_name)
     finish_name = request.form.get("input_2222")
+    if finish_name is None:
+        finish_name = "улица Соболева, 30, город Смоленск, Россия"
+    print(finish_name)
 
     points = build_geocode(start_name, finish_name)
     m = build_path(MY_GRAPH.G, points[0], points[1], "length")

@@ -3,6 +3,7 @@ from flask import Flask
 
 app = Flask(__name__)
 
+app.add_url_rule("/", view_func=home, methods=["GET", "POST"])
 app.add_url_rule("/home/", view_func=home, methods=["GET", "POST"])
 app.add_url_rule("/route/", view_func=routes, methods=["GET", "POST"])
 app.add_url_rule("/map/", view_func=map, methods=["GET", "POST"])
