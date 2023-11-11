@@ -3,27 +3,27 @@ from init import *
 
 
 def home():
-    return render_template('index.html')
+    return render_template("index.html")
 
 
 def routes():
-    return render_template('route.html')
+    return render_template("route.html")
 
 
 def contact():
-    return render_template('contact.html')
+    return render_template("contact.html")
 
 
 def report():
-    pass
+    return render_template("report.html")
 
 
 def map():
-    start_name = request.form.get('input_1111')
+    start_name = request.form.get("input_1111")
 
-    finish_name = request.form.get('input_2222')
+    finish_name = request.form.get("input_2222")
 
     points = build_geocode(start_name, finish_name)
     m = build_path(MY_GRAPH.G, points[0], points[1], "length")
     my_map = m.get_root().render()
-    return render_template('map.html', table=my_map)
+    return render_template("map.html", table=my_map)
