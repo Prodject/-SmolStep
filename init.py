@@ -333,7 +333,7 @@ now = now.strftime("%d-%m-%Y %H:%M")
 
 html_string_time = Template(html_string).safe_substitute(code=now)
 
-with open("map.html", "w", encoding="utf-8") as f:
+with open("template/map.html", "w", encoding="utf-8") as f:
     # f.write(html_string.format(table=df.to_html(classes='styled-table')))
     table = m.get_root().render()
     # table = m.get_root().script.render()
