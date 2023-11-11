@@ -19,15 +19,9 @@ def report():
 
 
 def map():
-    start_name = """
-    36, улица Октябрьской Революции, Ленинский район, городской округ Смоленск, 
-    Смоленская область, Центральный федеральный округ, 210000, Россия
-    """
+    start_name = request.form.get('input_1111')
 
-    finish_name = """
-    Гимназия им. Пржевальского, улица Ленина, Ленинский район, городской округ Смоленск, 
-    Смоленская область, Центральный федеральный округ, 210000, Россия
-    """
+    finish_name = request.form.get('input_2222')
 
     points = build_geocode(start_name, finish_name)
     m = build_path(MY_GRAPH.G, points[0], points[1], "length")
